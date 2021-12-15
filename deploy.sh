@@ -1,6 +1,6 @@
-docker build -t ybaeofco/multi-client:latest ybaeofco/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t ybaeofco/multi-server:latest ybaeofco/multi-server::$SHA -f ./server/Dockerfile ./server
-docker build -t ybaeofco/multi-worker:latest ybaeofco/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t ybaeofco/multi-client:latest -t ybaeofco/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t ybaeofco/multi-server:latest -t ybaeofco/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t ybaeofco/multi-worker:latest -t ybaeofco/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push ybaeofco/multi-client:latest
 docker push ybaeofco/multi-server:latest
 docker push ybaeofco/multi-worker:latest
